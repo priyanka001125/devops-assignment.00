@@ -1,0 +1,16 @@
+# Terraform
+terraform.exe
+*.exe
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform-provider-*
+
+# Python
+__pycache__/
+*.pyc
+
+# Local files
+*.log
+*.zip
