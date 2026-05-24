@@ -1,5 +1,5 @@
 {
-  "scan_timestamp": "2026-05-23T13:57:58.696437+00:00",
+  "scan_timestamp": "2026-05-24T17:19:45.214416+00:00",
   "account_id": "000000000000",
   "region": "us-east-1",
   "summary": {
@@ -17,14 +17,14 @@
     {
       "resource_id": "vol-ea46ef47fb8f98d83",
       "resource_type": "ebs_volume",
-      "reason": "missing tags: {'Environment', 'Owner', 'Project'}",
+      "reason": "missing tags: {'Project', 'Owner', 'Environment'}",
       "age_days": 0,
       "estimated_monthly_waste_usd": 0
     },
     {
       "resource_id": "vol-34c0708fb51169cbf",
       "resource_type": "ebs_volume",
-      "reason": "missing tags: {'Environment', 'Owner', 'Project'}",
+      "reason": "missing tags: {'Project', 'Owner', 'Environment'}",
       "age_days": 0,
       "estimated_monthly_waste_usd": 0
     }
