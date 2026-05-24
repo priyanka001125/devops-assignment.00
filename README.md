@@ -171,28 +171,28 @@ Decisions & Deviations
 Decision	                    Reason
 
 Port 22 open to 0.0.0.0/0	    Followed spec but flagged as insecure. Production should restrict to VPN/bastion IPs only.
-Moto instead of LocalStack	    LocalStack had WSL2 compatibility issues on Windows. Moto is explicitly allowed in the assignment (Page 3, Section 4.1).
+Moto instead of LocalStack	  LocalStack had WSL2 compatibility issues on Windows. Moto is explicitly allowed in the assignment (Page 3, Section 4.1).
 Static pricing hardcoded	    Using static prices from AWS public pricing. Production would integrate AWS Price List API.
 No real AWS account used	    Entire assignment runs locally with mocked APIs to avoid any real cloud costs.
 EBS orphan volume created	    Intentionally unattached volume included to test cleanup automation in Part B.
-Protected tag guardrail	            Resources with Protected=true tag are never deleted, even in --delete mode.
+Protected tag guardrail	      Resources with Protected=true tag are never deleted, even in --delete mode.
 
 Trade-offs (What I would do with one more week)
 
-Priority	Improvement	           Why
+Priority	Improvement	               Why
 1	        Dynamic pricing	           Integrate AWS Price List API instead of hardcoded static prices.
-2	        Multi-region scanning	   Currently scans only us-east-1. Production needs all regions.
-3	        Database backend	   Store findings in DynamoDB/RDS for historical trending analysis.
-4	        Scheduled execution	   Add CloudWatch Events cron job for daily automated scans.
-5	        Web dashboard	           Build React dashboard showing waste trends and top offenders.
-6	        Unit tests	           Add pytest with moto mocking for comprehensive test coverage.
+2	        Multi-region scanning	     Currently scans only us-east-1. Production needs all regions.
+3	        Database backend	         Store findings in DynamoDB/RDS for historical trending analysis.
+4	        Scheduled execution	       Add CloudWatch Events cron job for daily automated scans.
+5	        Web dashboard	             Build React dashboard showing waste trends and top offenders.
+6	        Unit tests	               Add pytest with moto mocking for comprehensive test coverage.
 7	        Terraform state locking	   Use DynamoDB backend for state locking in production.
 
 
 AI Usage Disclosure
 Tools Used
 
-Tool	  Purpose
+Tool	    Purpose
 ChatGPT	  Initial script structure, error handling patterns, debugging assistance
 GitHub    Copilot	Terraform module boilerplate, boto3 client setup, repetitive code
 Claude	  Moto server connection debugging, PATH configuration issues
